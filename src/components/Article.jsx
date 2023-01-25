@@ -1,9 +1,15 @@
 import React from 'react'
 
-export default function Article() {
+export default function Article(props) {
   return (
-    <div>
-        <h1>Article</h1>
-    </div>
+    <article>
+        <div style={{ position: "relative", height: "fit-content" }}>
+            <h4> {props.article.title} </h4>
+            <div className="underline"></div>
+        </div>
+        <p>
+            {props.article.body}
+        </p>
+    </article>
   )
 }
